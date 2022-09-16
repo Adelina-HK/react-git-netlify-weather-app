@@ -1,26 +1,27 @@
-import React, {useState} from "react";
-import ReactLoading from "react-loading";
+import React, { useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import axios from "axios";
 import "./App.css";
-
 
 export default function App() {
   let [query, setQuery] = useState("");
   let [weather, setWeather] = useState({});
   let [city, setCity] = useState("");
+
   return (
-    
+     
     function showWeather(response) {
-    setQuery(true)
+    setQuery(true);
 
     setWeather({
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-}  )
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
@@ -30,7 +31,7 @@ export default function App() {
   }
 
   function updateCity(event) {
-    setCity (event.target.value)
+    setCity(event.target.value);
   }
 
   let searchForm = (
@@ -62,9 +63,13 @@ export default function App() {
     return (
       <div>
         {searchForm}
-        <ReactLoading type={"Bubbles"} color={"pink"} height={80} width={80} />
+        <ClipLoader
+          color="orange"
+          loading={true}
+          size={60}
+        />
       </div>
     );
   }
+  )
 }
-
