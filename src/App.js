@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import ReactLoading from "react-loading";
+import axios from "axios";
 import "./App.css";
 
 
@@ -8,10 +9,9 @@ export default function App() {
   let [weather, setWeather] = useState({});
   let [city, setCity] = useState("");
   return (
-    <div className="App">
     
-  function showWeather(response) {
-    setQuery(true);
+    function showWeather(response) {
+    setQuery(true)
 
     setWeather({
       temperature: Math.round(response.data.main.temp),
@@ -20,7 +20,7 @@ export default function App() {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
-}  
+}  )
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
@@ -32,6 +32,7 @@ export default function App() {
   function updateCity(event) {
     setCity (event.target.value)
   }
+
   let searchForm = (
     <div className="Weather">
       <h1>Weather App</h1>
@@ -65,6 +66,5 @@ export default function App() {
       </div>
     );
   }
-</div>
 }
 
