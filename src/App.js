@@ -36,7 +36,11 @@ export default function App() {
     <div className="Weather">
       <h1>Weather App</h1>
       <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Type a city" onChange={updateCity} />
+        <input
+          type="search"
+          placeholder="Type a city"
+          onChange={updateCity}
+        />
         <input type="submit" value="Search" />
       </form>
     </div>
