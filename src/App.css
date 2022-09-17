@@ -1,38 +1,33 @@
-.App {
+body {
+  font-family: "Mukta Malar", sans-serif;
+}
+.Weather {
+  text-align: center;
+  box-shadow: 4px 3px 5px rgb(224, 221, 221);
+  padding: 20px;
+  margin: 20px;
+  color: rgb(18, 23, 122);
+  background-color: rgb(174, 227, 209);
+  border-radius: 4px;
+}
+searchForm {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 4px 3px 5px rgb(224, 221, 221);
+}
+input {
+  padding: 14px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+  color: rgb(18, 23, 122);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader {
+  text-align: center;
+  padding: 25px;
 }

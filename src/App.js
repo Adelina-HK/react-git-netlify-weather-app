@@ -8,9 +8,7 @@ export default function App() {
   let [weather, setWeather] = useState({});
   let [city, setCity] = useState("");
 
-  return (
-     
-    function showWeather(response) {
+  function showWeather(response) {
     setQuery(true);
 
     setWeather({
@@ -63,13 +61,10 @@ export default function App() {
     return (
       <div>
         {searchForm}
-        <ClipLoader
-          color="orange"
-          loading={true}
-          size={60}
-        />
+        <div className="loader">
+          <ClipLoader color="orange" loading={true} size={60} />
+        </div>
       </div>
     );
   }
-  )
 }
