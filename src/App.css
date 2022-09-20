@@ -1,36 +1,41 @@
 body {
   font-family: "Mukta Malar", sans-serif;
+  
 }
-.Weather {
+.WeatherApp {
   text-align: center;
-  box-shadow: 4px 3px 5px rgb(224, 221, 221);
   padding: 20px;
   margin: 20px;
-  color: rgb(18, 23, 122);
-  background-color: rgb(174, 227, 209);
+  color: rgb(254, 254, 254);
   border-radius: 4px;
+  text-shadow:1px 1px 5px rgb(19, 18, 18);
+  background: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%);
 }
 searchForm {
   display: block;
   margin: 0 auto;
-  box-shadow: 4px 3px 5px rgb(224, 221, 221);
+  box-shadow: 4px 3px 5px rgb(48, 46, 46); 
 }
 
 input {
-  padding: 14px;
+  padding: 12px;
   margin: 5px;
   border-radius: 4px;
   font-size: 18px;
+  border: 1px solid rgb(6, 12, 125);
+  box-shadow: 2px 2px 5px rgb(31, 42, 76);
+  
 }
 ul {
   padding: 20px;
 }
 li {
   list-style: none;
-  color: rgb(18, 23, 122);
+  color: rgb(82, 90, 239);
   text-align: center;
 }
 .loader {
   text-align: center;
   padding: 25px;
+  
 }

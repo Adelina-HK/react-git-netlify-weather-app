@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { startTransition, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import axios from "axios";
 import "./App.css";
+
 
 export default function App() {
   let [query, setQuery] = useState("");
@@ -34,13 +35,9 @@ export default function App() {
 
   let searchForm = (
     <div className="Weather">
-      <h1>Weather App</h1>
+      <h1 className="mb-3">React Weather App</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Type a city"
-          onChange={updateCity}
-        />
+        <input type="search" placeholder="Type a city" className="me-3" onChange={updateCity} />
         <input type="submit" value="Search" />
       </form>
     </div>
