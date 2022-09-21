@@ -1,6 +1,7 @@
 import React, { startTransition, useState } from "react";
 import axios from "axios";
 import "./App.css";
+import kitty from "./kitty.gif";
 
 export default function App() {
   let [query, setQuery] = useState("");
@@ -51,19 +52,30 @@ export default function App() {
       <div>
         {searchForm}
         <div className="row">
-          <ul>
-            <li>Temperature: {weather.temperature} ℃</li>
-            <li>Description: {weather.description}</li>
-            <li>Humidity: {weather.humidity} %</li>
-            <li>Wind: {weather.wind}km/h</li>
-            <li>
-              <img src={weather.icon} alt={weather.description} />
-            </li>
-          </ul>
+          <div classsName="col-sm">
+            <img src={weather.icon} alt={weather.description} />
+            <div classsName="col-sm">
+              <img src={kitty} alt="pic kitty" className="kitty" width={100} />
+            </div>
+          </div>
+          <div className="col-sm">
+            <ul>
+              <li>Temperature: {weather.temperature} ℃</li>
+              <li>Description: {weather.description}</li>
+              <li>Humidity: {weather.humidity} %</li>
+              <li>Wind: {weather.wind}km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     );
   } else {
-    return <div className="container-fluid">{searchForm}</div>;
+    return (
+      <div className="container">
+        {searchForm}
+        <br />
+        <img src={kitty} alt="pic kitty" width={100} />
+      </div>
+    );
   }
 }

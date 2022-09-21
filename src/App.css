@@ -3,22 +3,20 @@ body {
 }
 .WeatherApp {
   text-align: center;
-  padding: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
   color: rgb(254, 254, 254);
   border-radius: 4px;
-  text-shadow: 1px 1px 5px rgb(19, 18, 18);
+  text-shadow: 1px 1px 5px rgb(157, 74, 22);
   background: linear-gradient(
-    109.6deg,
-    rgb(0, 37, 84) 11.2%,
-    rgba(0, 37, 84, 0.32) 100.2%
+    350.6deg,
+    rgba(246, 212, 103, 0.814) 11.2%,
+    rgba(214, 65, 6, 0.709) 100.2%
   );
-  max-width: 500px;
-}
+ }
 searchForm {
   display: block;
   margin: 20px auto;
-  box-shadow: 4px 3px 5px rgb(48, 46, 46);
+  box-shadow: 2px 2px 5px rgb(157, 74, 22);
 }
 
 input {
@@ -26,15 +24,13 @@ input {
   margin: 5px;
   border-radius: 4px;
   font-size: 18px;
-  border: 1px solid rgb(6, 12, 125);
-  box-shadow: 2px 2px 5px rgb(31, 42, 76);
+  border: 1px solid rgb(120, 40, 8);
+  box-shadow: 2px 2px 5px rgb(157, 74, 22);
 }
-ul {
-  padding: 20px;
-}
+ul {margin:10px;}
 li {
   list-style: none;
   color: rgb(247, 247, 250);
-  font-size: 18px;
-  text-align: center;
+  font-size: 16px;
+
 }

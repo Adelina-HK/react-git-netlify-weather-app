@@ -9,11 +9,14 @@ body {
 .wallpaper {
   display: block;
   margin: 10px auto;
-  width: 250px;
-  box-shadow: 4px 3px 5px rgb(48, 46, 46);
+  max-width: 400px;
+  box-shadow: 4px 3px 5px rgb(148, 79, 36);
+  border-radius: 4px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-footer a{color: white;}
+footer a {
+  color: white;
+}

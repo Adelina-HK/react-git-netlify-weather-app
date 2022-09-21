@@ -10,10 +10,9 @@ import Wallpaper from "./Wallpaper.jpg";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="WeatherApp">
-      <header>
-        <img src={Wallpaper} className="wallpaper" alt="spinner" />
-      </header>
+    <div className="WeatherApp mt-3">
+      <br />
+      <img src={Wallpaper} className="wallpaper" alt="spinner" />
       <App />
       <footer className="mt-4">
         <a
