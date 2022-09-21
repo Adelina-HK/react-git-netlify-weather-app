@@ -60,11 +60,9 @@ export default function App() {
     );
   } else {
     return (
-      <div>
+      <div className="container m-4">
         {searchForm}
-        <div className="loader">
-          <ClipLoader color="orange" loading={true} size={60} />
-        </div>
+        
       </div>
     );
   }
