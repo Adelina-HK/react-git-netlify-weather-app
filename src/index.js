@@ -4,14 +4,22 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
+import Wallpaper from "./Wallpaper.jpg";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div className="WeatherApp">
+      <header>
+        <img src={Wallpaper} className="wallpaper" alt="spinner" />
+      </header>
       <App />
-      <footer>
-        <a href="https://github.com/Adelina-HK/react-git-netlify-weather-app">
+      <footer className="mt-4">
+        <a
+          href="https://github.com/Adelina-HK/react-git-netlify-weather-app"
+          target="_blank"
+        >
           See my code on my GitHub{" "}
         </a>
       </footer>

@@ -1,8 +1,6 @@
 import React, { startTransition, useState } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
 import axios from "axios";
 import "./App.css";
-
 
 export default function App() {
   let [query, setQuery] = useState("");
@@ -37,7 +35,12 @@ export default function App() {
     <div className="Weather">
       <h1 className="mb-3">React Weather App</h1>
       <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Type a city" className="me-3" onChange={updateCity} />
+        <input
+          type="search"
+          placeholder="Type a city"
+          className="me-3"
+          onChange={updateCity}
+        />
         <input type="submit" value="Search" />
       </form>
     </div>
@@ -47,23 +50,20 @@ export default function App() {
     return (
       <div>
         {searchForm}
-        <ul>
-          <li>Temperature: {weather.temperature} ℃</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity} %</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+        <div className="row">
+          <ul>
+            <li>Temperature: {weather.temperature} ℃</li>
+            <li>Description: {weather.description}</li>
+            <li>Humidity: {weather.humidity} %</li>
+            <li>Wind: {weather.wind}km/h</li>
+            <li>
+              <img src={weather.icon} alt={weather.description} />
+            </li>
+          </ul>
+        </div>
       </div>
     );
   } else {
-    return (
-      <div className="container m-4">
-        {searchForm}
-        
-      </div>
-    );
+    return <div className="container-fluid">{searchForm}</div>;
   }
 }

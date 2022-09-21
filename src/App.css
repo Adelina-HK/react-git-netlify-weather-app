@@ -1,20 +1,24 @@
 body {
   font-family: "Mukta Malar", sans-serif;
-  
 }
 .WeatherApp {
   text-align: center;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;
   color: rgb(254, 254, 254);
   border-radius: 4px;
-  text-shadow:1px 1px 5px rgb(19, 18, 18);
-  background: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%);
+  text-shadow: 1px 1px 5px rgb(19, 18, 18);
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 37, 84) 11.2%,
+    rgba(0, 37, 84, 0.32) 100.2%
+  );
+  max-width: 500px;
 }
 searchForm {
   display: block;
-  margin: 0 auto;
-  box-shadow: 4px 3px 5px rgb(48, 46, 46); 
+  margin: 20px auto;
+  box-shadow: 4px 3px 5px rgb(48, 46, 46);
 }
 
 input {
@@ -24,18 +28,13 @@ input {
   font-size: 18px;
   border: 1px solid rgb(6, 12, 125);
   box-shadow: 2px 2px 5px rgb(31, 42, 76);
-  
 }
 ul {
   padding: 20px;
 }
 li {
   list-style: none;
-  color: rgb(82, 90, 239);
+  color: rgb(247, 247, 250);
+  font-size: 18px;
   text-align: center;
-}
-.loader {
-  text-align: center;
-  padding: 25px;
-  
 }
