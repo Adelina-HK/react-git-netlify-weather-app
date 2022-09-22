@@ -10,7 +10,6 @@ export default function App() {
 
   function showWeather(response) {
     setQuery(true);
-
     setWeather({
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
@@ -70,12 +69,6 @@ export default function App() {
       </div>
     );
   } else {
-    return (
-      <div className="container">
-        {searchForm}
-        <br />
-        <img src={kitty} alt="pic kitty" width={100} />
-      </div>
-    );
+    return <div className="container">{searchForm}</div>;
   }
 }
