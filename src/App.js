@@ -1,14 +1,18 @@
-import React, { startTransition, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import kitty from "./kitty.gif";
+import FormattedDate from "./FormattedDate.js";
+import IconDate from "./icons-date.png";
 
 export default function App() {
   let [query, setQuery] = useState("");
   let [weather, setWeather] = useState({});
   let [city, setCity] = useState("");
+  let [dateInfo, setDateInfo] = useState();
 
   function showWeather(response) {
+    console.log(response.data);
     setQuery(true);
     setWeather({
       temperature: Math.round(response.data.main.temp),
@@ -17,6 +21,9 @@ export default function App() {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+    setDateInfo (date= new Date(response.data.dt * 1000));
+    
+   
   }
 
   function handleSubmit(event) {
@@ -51,9 +58,9 @@ export default function App() {
       <div>
         {searchForm}
         <div className="row">
-          <div classsName="col-sm">
+          <div className="col-sm">
             <img src={weather.icon} alt={weather.description} />
-            <div classsName="col-sm">
+            <div className="col-sm">
               <img src={kitty} alt="pic kitty" className="kitty" width={100} />
             </div>
           </div>
@@ -69,6 +76,13 @@ export default function App() {
       </div>
     );
   } else {
-    return <div className="container">{searchForm}</div>;
+    return (
+      <div className="container">
+        {searchForm}
+        <FormattedDate date={date} />
+        <img src={IconDate} alt="DateInfo pic" width="70px" />{" "}
+        
+      </div>
+    );
   }
 }

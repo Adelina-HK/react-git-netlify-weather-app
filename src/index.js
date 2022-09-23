@@ -7,17 +7,20 @@ import "bootstrap/dist/css/bootstrap.css";
 import Wallpaper from "./Wallpaper.jpg";
 
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="WeatherApp mt-3">
+    <div className="WeatherApp">
       <br />
-      <img src={Wallpaper} className="wallpaper" alt="spinner" />
+      <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
+      
       <App />
       <footer className="mt-4">
         <a
           href="https://github.com/Adelina-HK/react-git-netlify-weather-app"
           target="_blank"
+          rel="noopener noreferrer"
         >
           See my code on my GitHub{" "}
         </a>

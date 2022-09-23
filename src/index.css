@@ -9,7 +9,7 @@ body {
 .wallpaper {
   display: block;
   margin: 10px auto;
-  max-width: 400px;
+  max-width: 500px;
   box-shadow: 4px 3px 5px rgb(148, 79, 36);
   border-radius: 4px;
 }
