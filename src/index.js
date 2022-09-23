@@ -4,16 +4,23 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
-import Wallpaper from "./Wallpaper.jpg";
-
-
+import IconDate from "./icons-date.png";
+import FormattedDate from "./FormattedDate.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div className="WeatherApp">
       <br />
-      <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
+      <div className="row m-2">
+        <div className="col-2">
+          <img src={IconDate} alt="DateInfo pic" width="70px" />{" "}
+          <FormattedDate />
+        </div>
+        <div className="col-8">
+          <h1 className="m-2">React Weather App</h1>
+        </div>
+      </div>
       
       <App />
       <footer className="mt-4">

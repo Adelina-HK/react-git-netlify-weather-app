@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import kitty from "./kitty.gif";
-import FormattedDate from "./FormattedDate.js";
-import IconDate from "./icons-date.png";
+import Wallpaper from "./Wallpaper.jpg";
 
 export default function App() {
   let [query, setQuery] = useState("");
   let [weather, setWeather] = useState({});
   let [city, setCity] = useState("");
-  let [dateInfo, setDateInfo] = useState();
 
   function showWeather(response) {
     console.log(response.data);
@@ -21,9 +19,6 @@ export default function App() {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-    setDateInfo (date= new Date(response.data.dt * 1000));
-    
-   
   }
 
   function handleSubmit(event) {
@@ -39,8 +34,7 @@ export default function App() {
   }
 
   let searchForm = (
-    <div className="Weather">
-      <h1 className="mb-3">React Weather App</h1>
+    <div className="Weather m-3">
       <form onSubmit={handleSubmit}>
         <input
           type="search"
@@ -58,14 +52,15 @@ export default function App() {
       <div>
         {searchForm}
         <div className="row">
-          <div className="col-sm">
+          {" "}
+          <div className="col-sm-6">
             <img src={weather.icon} alt={weather.description} />
-            <div className="col-sm">
+            <div className="col-sm-12">
               <img src={kitty} alt="pic kitty" className="kitty" width={100} />
             </div>
           </div>
-          <div className="col-sm">
-            <ul>
+          <div className="col-sm-4 mt-3 center">
+            <ul className="mt-3">
               <li>Temperature: {weather.temperature} ℃</li>
               <li>Description: {weather.description}</li>
               <li>Humidity: {weather.humidity} %</li>
@@ -78,10 +73,8 @@ export default function App() {
   } else {
     return (
       <div className="container">
+        <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
         {searchForm}
-        <FormattedDate date={date} />
-        <img src={IconDate} alt="DateInfo pic" width="70px" />{" "}
-        
       </div>
     );
   }
