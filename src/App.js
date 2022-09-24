@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import kitty from "./kitty.gif";
 import Wallpaper from "./Wallpaper.jpg";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function App() {
   let [query, setQuery] = useState("");
@@ -20,17 +19,21 @@ export default function App() {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       data: new Date(response.data.dt * 1000),
+      city: response.data.name,
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+    search();
+  }
+
+  function search() {
     let apiKey = "1dad91bc92f6c69698e1aad50d0a7304";
     let units = `metric`;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(showWeather);
   }
-
   function updateCity(event) {
     setCity(event.target.value);
   }
@@ -53,30 +56,17 @@ export default function App() {
     return (
       <div>
         {searchForm}
-        <div className="row">
-          {" "}
-          <div className="col-sm-6">
-            <img src={weather.icon} alt={weather.description} />
-            <div className="col-sm-12">
-              <img src={kitty} alt="pic kitty" className="kitty" width={100} />
-            </div>
-          </div>
-          <div className="col-sm-4 mt-3 center">
-            <ul className="mt-3">
-              <li>Temperature: {weather.temperature} ℃</li>
-              <li>Description: {weather.description}</li>
-              <li>Humidity: {weather.humidity} %</li>
-              <li>Wind: {weather.wind}km/h</li>
-            </ul>
-          </div>
-        </div>
+        <p>The weather in ${city} is:</p>
+        <WeatherInfo info={weather} />
       </div>
     );
   } else {
+    search();
     return (
       <div className="container">
         <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
         {searchForm}
+        <p>Loading...</p>
       </div>
     );
   }
