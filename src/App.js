@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import kitty from "./kitty.gif";
 import Wallpaper from "./Wallpaper.jpg";
+import FormattedDate from "./FormattedDate";
 
 export default function App() {
   let [query, setQuery] = useState("");
@@ -18,6 +19,7 @@ export default function App() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      data: new Date(response.data.dt * 1000),
     });
   }
 
