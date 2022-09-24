@@ -55,18 +55,18 @@ export default function App() {
   if (query) {
     return (
       <div>
+        <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
         {searchForm}
-        <p>The weather in ${city} is:</p>
+        <h3>The weather in {weather.city} is:</h3>
         <WeatherInfo info={weather} />
       </div>
     );
   } else {
     search();
     return (
-      <div className="container">
+      <div>
         <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
         {searchForm}
-        <p>Loading...</p>
       </div>
     );
   }

@@ -15,7 +15,7 @@ root.render(
       <div className="row m-2">
         <div className="col-2">
           <img src={IconDate} alt="DateInfo pic" width="70px" />{" "}
-          <FormattedDate />
+          <FormattedDate date={new Date()}/>
         </div>
         <div className="col-8">
           <h1 className="m-2">React Weather App</h1>
