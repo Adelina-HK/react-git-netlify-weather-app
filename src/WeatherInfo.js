@@ -1,12 +1,14 @@
 import React from "react";
 import kitty from "./kitty.gif";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
         <div className="col-sm-6">
-          <img src={props.info.icon} alt={props.info.description} />
+          <WeatherIcon code={props.info.icon} />
+
           <div className="col-sm-12">
             <img src={kitty} alt="pic kitty" className="kitty" width={100} />
           </div>
