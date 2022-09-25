@@ -24,8 +24,8 @@ export default function FormattedDate(props) {
 
   return (
     <div className="DateInfo">
-      <p1>{day}</p1>
-      <p2 className="ms-3">
+      <p1 className="d-block">{day}</p1>
+      <p2>
         {hours}:{minutes}
       </p2>
     </div>

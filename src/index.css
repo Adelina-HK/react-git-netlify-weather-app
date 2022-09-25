@@ -11,11 +11,11 @@ body {
 }
 
 .wallpaper {
-  margin: 10px auto;
-  max-width: 500px;
+  margin: 5px auto;
   box-shadow: 4px 3px 5px rgb(148, 79, 36);
   border-radius: 4px;
   opacity: 97%;
+  max-height: 200px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -23,6 +23,4 @@ code {
 }
 footer a {
   color: rgb(255, 255, 255);
-
 }
-

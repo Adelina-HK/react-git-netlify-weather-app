@@ -31,3 +31,7 @@ input {
 .weatherPic {
   display: inline;
 }
+ .DateInfo p1 {
+  font-size: 15px;
+}
+ .DateInfo p2 {font-size: 13px;}
