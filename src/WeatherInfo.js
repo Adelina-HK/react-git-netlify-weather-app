@@ -8,14 +8,14 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
-        <div className="col-sm-5">
+        <div className="col-sm-4">
           <WeatherIcon code={props.info.icon} />
 
           <div className="col-sm-12">
             <img src={kitty} alt="pic kitty" className="kitty" width={100} />
           </div>
         </div>
-        <div className="col-sm-2">
+        <div className="col-sm-3">
           <WeatherTemperature celsius={props.info.temperature} />
         </div>
         <div className="col-sm-5 mt-2">

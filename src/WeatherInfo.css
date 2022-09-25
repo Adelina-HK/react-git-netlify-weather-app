@@ -10,17 +10,18 @@ li {
   text-align: left;
 }
 .WeatherApp .Temp {
-  font-size: 40px;
+  font-size: 45px;
   color: #e68d59;
   text-align: left;
 }
 .WeatherApp .unit {
   color: #e68d59;
   text-shadow: none;
-  size: 10px;
+  font-size: 12px;
   position: relative;
-  top: -17px;
+  top: -20px;
 }
+
 .WeatherTemperature {
   text-align: center;
 }
