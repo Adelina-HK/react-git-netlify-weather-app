@@ -1,0 +1,29 @@
+.WeatherTemperature {
+  text-align: center;
+}
+.WeatherInfo ul {
+  color: #e68d59;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
+}
+.WeatherApp .Temp {
+  font-size: 40px;
+  color: #e68d59;
+  text-align: left;
+}
+.WeatherApp .unit {
+  color: #e68d59;
+  text-shadow: none;
+  size: 10px;
+  position: relative;
+  top: -17px;
+}
+.WeatherTemperature {
+  text-align: center;
+}
+.WeatherInfo ul {
+  color: #e68d59;
+}

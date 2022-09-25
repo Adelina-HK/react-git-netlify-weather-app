@@ -6,13 +6,13 @@ body {
   margin: 10px auto;
   color: rgb(254, 254, 254);
   border-radius: 70px;
-  text-shadow: 1px 1px 5px rgb(157, 74, 22);
   background: linear-gradient(
     350.6deg,
     rgba(246, 212, 103, 0.814) 11.2%,
     rgba(214, 65, 6, 0.709) 100.2%
   );
 }
+
 searchForm {
   display: block;
   margin: 20px auto;
@@ -28,13 +28,6 @@ input {
   box-shadow: 2px 2px 5px rgb(157, 74, 22);
 }
 
-li {
-  margin-top: 5px;
-  list-style: none;
-  color: rgb(247, 247, 250);
-  font-size: 16px;
-  text-align: center;
-}
 .weatherPic {
   display: inline;
 }
