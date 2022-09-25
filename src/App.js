@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import WeatherInfo from "./WeatherInfo";
+import Wallpaper from "./Wallpaper.jpg";
 
 export default function App() {
   let [query, setQuery] = useState("");
@@ -54,6 +55,7 @@ export default function App() {
   if (query) {
     return (
       <div>
+        <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
         {searchForm}
         <h3>The weather in {weather.city} is:</h3>
         <WeatherInfo info={weather} />
@@ -61,6 +63,12 @@ export default function App() {
     );
   } else {
     search();
-    return <div>{searchForm}</div>;
+    return (
+      <div>
+        {" "}
+        <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
+        {searchForm}
+      </div>
+    );
   }
 }

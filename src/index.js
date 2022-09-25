@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import IconDate from "./icons-date.png";
 import FormattedDate from "./FormattedDate.js";
-import Wallpaper from "./Wallpaper.jpg";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,7 +22,7 @@ root.render(
           <h1 className="m-2">React Weather App</h1>
         </div>{" "}
       </div>
-      <img src={Wallpaper} className="wallpaper" alt="wallpaper" />
+     
 
       <App />
       <footer className="m-4">
